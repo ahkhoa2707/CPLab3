@@ -46,4 +46,5 @@ def home():
     return render_template_string(html_code, name="Nguyễn Phan Anh Khoa", student_id="22dh111678")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
